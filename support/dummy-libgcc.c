@@ -706,6 +706,51 @@ __riscv_restore_12 ()
 }
 #endif
 
+
+#ifdef __arc__
+
+#define HIDDEN_FUNC(name)			\
+  void  __st_r13_to_ ## name			\
+  (void)					\
+  {						\
+  }						\
+  void  __ld_r13_to_ ## name			\
+  (void)					\
+  {						\
+  }						\
+  void  __ld_r13_to_ ## name ## _ret		\
+  (void)					\
+  {						\
+  }
+
+  HIDDEN_FUNC(r15)
+  HIDDEN_FUNC(r16)
+  HIDDEN_FUNC(r17)
+  HIDDEN_FUNC(r18)
+  HIDDEN_FUNC(r19)
+  HIDDEN_FUNC(r20)
+  HIDDEN_FUNC(r21)
+  HIDDEN_FUNC(r22)
+  HIDDEN_FUNC(r23)
+  HIDDEN_FUNC(r24)
+  HIDDEN_FUNC(r25)
+
+unsigned int
+__umodsi3 (unsigned int a __attribute__ ((unused)),
+	   unsigned int b __attribute__ ((unused)))
+{
+  return 0;
+}
+
+int
+__modsi3 (int a __attribute__ ((unused)),
+	  int b __attribute__ ((unused)))
+{
+  return 0;
+}
+
+#undef HIDDEN_FUNC
+#endif /* __arc__ */
 /*
    Local Variables:
    mode: C
