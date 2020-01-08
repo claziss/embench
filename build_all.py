@@ -456,7 +456,7 @@ def compile_file(f_root, srcdir, bindir):
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 cwd=bindir,
-                timeout=5,
+                timeout=25,
             )
             if res.returncode != 0:
                 log.warning(

@@ -749,6 +749,42 @@ __modsi3 (int a __attribute__ ((unused)),
   return 0;
 }
 
+#ifdef __llvm__
+void
+__ac_mc_va (void)
+{
+}
+
+#define FUNC(name)\
+  void name \
+  (void)    \
+  {	    \
+  }
+
+  FUNC(_mwdsub_)
+  FUNC(__dcmpIEEE)
+  FUNC(_mwdadd_)
+  FUNC(_mwdrdiv_)
+  FUNC(_mwdmul_)
+  FUNC(_mwdrsub_)
+  FUNC(_mwddiv_)
+  FUNC(_mwcvtfd)
+  FUNC(_mwcvtdf)
+  FUNC(__ctype)
+  FUNC(tolower)
+  FUNC(_mwdflt_)
+  FUNC(_mwdtrunc_)
+  FUNC(_divmod_normbs)
+  FUNC(_udivmod_normbs)
+  FUNC(_mwfmul_)
+  FUNC(_mwfadd_)
+  FUNC(__fcmpIEEE)
+  FUNC(_mwfdiv_)
+  FUNC(_mwfrsub_)
+  FUNC(_mwfsub_)
+
+#endif
+#undef FUNC
 #undef HIDDEN_FUNC
 #endif /* __arc__ */
 /*

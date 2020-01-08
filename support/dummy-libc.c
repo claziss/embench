@@ -22,6 +22,13 @@
 #undef ferror
 #endif
 
+#ifdef __arc__
+# ifdef __llvm__
+#  undef putchar
+#  undef fileno
+# endif
+#endif
+
 
 void *__locale_ctype_ptr;
 
