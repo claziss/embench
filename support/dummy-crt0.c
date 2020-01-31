@@ -17,6 +17,7 @@
 
 extern int main (int argc, char *argv[]);
 
+void *__ctype_ptr__;
 
 void
 _start (void)

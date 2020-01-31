@@ -723,6 +723,7 @@ __riscv_restore_12 ()
   {						\
   }
 
+  HIDDEN_FUNC(r14)
   HIDDEN_FUNC(r15)
   HIDDEN_FUNC(r16)
   HIDDEN_FUNC(r17)

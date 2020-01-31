@@ -199,12 +199,13 @@ sprintf (char *str __attribute__ ((unused)),
   return 0;
 }
 
+#if __GNUC__ > 7
 int
 putchar (int c __attribute__ ((unused)))
 {
   return 0;
 }
-
+#endif
 
 int
 puts (const char *s __attribute__ ((unused)))
@@ -283,11 +284,13 @@ fgetc (FILE * stream __attribute__ ((unused)))
   return 0;
 }
 
+#if  __GNUC__ > 7
 int
 getc (FILE * stream __attribute__ ((unused)))
 {
   return 0;
 }
+#endif
 
 int
 ungetc (int c, FILE * stream __attribute__ ((unused)))
@@ -302,11 +305,13 @@ fputc (int ch __attribute__ ((unused)),
   return 0;
 }
 
+#if  __GNUC__ > 7
 int
 putc (int ch __attribute__ ((unused)), FILE * stream __attribute__ ((unused)))
 {
   return 0;
 }
+#endif
 
 char *
 fgets (char *s __attribute__ ((unused)),
