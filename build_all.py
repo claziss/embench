@@ -456,7 +456,7 @@ def compile_file(f_root, srcdir, bindir):
                 stdout=subprocess.PIPE,
                 stderr=subprocess.PIPE,
                 cwd=bindir,
-                timeout=25,
+                timeout=300,
             )
             if res.returncode != 0:
                 log.warning(
@@ -640,7 +640,7 @@ def link_benchmark(bench):
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             cwd=abs_bd_b,
-            timeout=5,
+            timeout=300,
         )
         if res.returncode != 0:
             log.warning(f'Warning: Link of benchmark "{bench}" failed')
