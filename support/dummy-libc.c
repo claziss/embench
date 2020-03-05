@@ -29,6 +29,9 @@
 # endif
 #endif
 
+#ifdef __ARM_ARCH
+#  undef putchar
+#endif
 
 void *__locale_ctype_ptr;
 
